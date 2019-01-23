@@ -1,0 +1,121 @@
+@import "settings"
+@import "mixin"
+.header
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.4)
+  background-color: $whiteColor
+
+  .flex-row
+    display: flex
+    align-items: center
+    width: 100%
+    justify-content: flex-end
+    min-height: 106px
+
+    .cell
+      width: 50%
+      display: flex
+      justify-content: space-between
+
+  .logo
+    transform: translate(-50%, 0)
+
+  .call
+    display: flex
+    flex-direction: column
+
+    span
+      font-family: $ralewaySemiBold
+      font-size: 12px
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      text-align: center
+      color: #4e4856
+      margin-bottom: 7px
+
+    a
+      min-width: 193px
+      height: 44px
+      border-radius: 22px
+      background-color: #49b278
+      font-family: $latoBlack
+      font-size: 18px
+      letter-spacing: 0.2px
+      text-align: center
+      color: $whiteColor
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding: 0 20px 0 5px
+      transition: $transition
+
+      &:hover
+        background-color: darken($greenColor, 5%)
+
+      strong
+        font-weight: normal
+        display: inline-block
+        padding-left: 12px
+
+      .phone
+        width: 34px
+        height: 34px
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $whiteColor
+        margin: 0
+
+        i
+          color: $greenColor
+          font-size: 20px
+
+nav
+  width: 100%
+  background-color: $blueColor
+
+  .container
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 48px
+
+  a
+    font-family: $ralewayMedium
+    font-size: 16px
+    font-weight: normal
+    letter-spacing: 0.3px
+    color: $whiteColor
+    display: flex
+    margin-left: 20px
+    margin-right: 20px
+    line-height: 28px
+    position: relative
+    transition: $transition
+
+    &:hover
+      color: rgba(255, 255, 255, .8)
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      right: -20px
+      top: 0
+      bottom: 0
+      height: 28px
+      width: 1px
+      background: linear-gradient(transparent 0%, $whiteColor 50%, transparent 100%)
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
+
+      &:after
+        display: none
+
+

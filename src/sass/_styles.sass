@@ -1,0 +1,62 @@
+@import "settings"
+@import "mixin"
+div[target="_blank"],
+a[title]
+  display: none !important
+
+.container
+  max-width: calc(1240px + 20px)
+  margin: 0 auto
+  padding: 0 10px
+
+.title
+  font-family: $ralewayBold
+  font-size: 40px
+  font-weight: normal
+  color: $blueColor
+  letter-spacing: 0.03rem
+label,
+input
+  &.arrow
+    position: relative
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      right: 14px
+      bottom: 15px
+      border-left: 4px solid transparent
+      border-right: 4px solid transparent
+      border-top: 5px solid #404040
+.btn
+  height: 50px
+  background-color: $redColor
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0 49px
+  font-family: $ralewayBold
+  font-size: 20px
+  font-weight: normal
+  letter-spacing: 0.5px
+  text-align: center
+  color: $whiteColor
+  transition: $transition
+  border: 0
+
+  &.sm-btn
+    height: 42px
+  &:hover
+    background-color: darken($redColor, 10%)
+
+.checkbox
+  display: inline-flex
+  align-items: center
+  margin-top: 23px
+  font-family: $ralewayLight
+  font-size: 16px
+  font-weight: normal
+  color: #5f667a
+  input
+    width: auto !important
+    height: auto

@@ -1,0 +1,114 @@
+@import "settings"
+.banner
+  min-height: 833px
+  background-image: linear-gradient(240deg, rgba(45, 149, 199, 0.83), rgba(159, 206, 229, 0.73) 54%, rgba(255, 255, 255, 0.83))
+  padding: 55px 0
+
+  .flex-banner-row
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+    .cell
+      width: calc(100% / 2)
+      flex-direction: column
+
+      &:first-child
+        padding: 65px 32px 65px 0
+
+      .title
+        padding-bottom: 62px
+
+.banner-list
+  font-family: $ralewayBold
+  font-size: 20px
+  font-weight: normal
+  color: $blueColor
+  margin-bottom: 50px
+
+  &__item
+    margin-bottom: 20px
+    width: 100%
+    display: flex
+    align-items: center
+
+  &__img
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: $yellowColor
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-right: 10px
+
+    img
+      width: auto
+.plugin
+  width: 100%
+  max-width: 605px
+  min-height: 106px
+  border-radius: 5px
+  background-color: rgba(255, 255, 255, 0.4)
+  display: flex
+  align-items: center
+  justify-content: center
+
+.main-form
+  width: 100%
+  max-width: 606px
+  min-height: 723px
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1)
+  background-color: $blueLightColor
+  padding: 42px 32px 40px 32px
+  &__title
+    width: 100%
+    font-family: $ralewayMedium
+    font-size: 25px
+    font-style: normal
+    color: $blueColor
+    padding-bottom: 23px
+  &__labels
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    label
+      width: calc(50% - 15px)
+      margin-bottom: 27px
+    span
+      display: block
+      font-family: $ralewayLight
+      font-size: 15px
+      font-weight: normal
+      color: #5f667a
+      padding-bottom: 2px
+
+  select,
+  input 
+    width: 100%
+    //width: 256px
+    height: 38px
+    border-radius: 5px
+    background-color: $whiteColor
+  .btn
+    margin: 0 auto
+  &__text
+    font-family: $ralewayRegular
+    font-size: 12px
+    font-weight: normal
+    font-style: normal
+    font-stretch: normal
+    line-height: 1.5
+    letter-spacing: normal
+    color: #5f667a
+    padding-top: 36px
+    display: inline-block
+    a
+      color: #223c8b
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
