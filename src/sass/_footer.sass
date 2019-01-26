@@ -1,2 +1,37 @@
 @import "settings"
 @import "mixin"
+.footer
+  width: 100%
+  min-height: 340px
+  background: #eef2f5
+  padding: 28px 0 22px 0
+  img
+    width: auto
+  &__row
+    width: 100%
+    min-height: 130px
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 28px
+    position: relative
+    &:after
+      position: absolute
+      width: 100%
+      min-height: 2px
+      background-image: linear-gradient(to right, #e5e5e5, #aaaaaa 25%, #95a0bf 48%, #aaaaaa 71%, #e5e5e5)
+  &__cell
+    &:first-child
+      max-width: 128px
+      margin-left: 130px
+      margin-right: 58px
+  p
+    width: 100%
+    min-height: 110px
+    font-family: $ralewayRegular
+    font-size: 14px
+    font-weight: normal
+    line-height: 1.57
+    color: #5f667a
+
