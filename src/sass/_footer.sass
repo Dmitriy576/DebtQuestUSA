@@ -5,28 +5,93 @@
   min-height: 340px
   background: #eef2f5
   padding: 28px 0 22px 0
+
   img
     width: auto
+
   &__row
     width: 100%
-    min-height: 130px
+    min-height: 150px
+    display: flex
     flex-direction: row
     flex-wrap: nowrap
-    justify-content: space-between
-    align-items: center
-    padding-bottom: 28px
+    justify-content: center
+    align-items: flex-start
+    padding-bottom: 52px
     position: relative
+
     &:after
+      content: ''
       position: absolute
-      width: 100%
-      min-height: 2px
+      bottom: 0
+      margin-bottom: 28px
+      width: 90%
+      min-height: 1px
       background-image: linear-gradient(to right, #e5e5e5, #aaaaaa 25%, #95a0bf 48%, #aaaaaa 71%, #e5e5e5)
+
   &__cell
     &:first-child
       max-width: 128px
-      margin-left: 130px
       margin-right: 58px
-  p
+      margin-left: 90px
+
+    &:nth-child(2)
+      max-width: 405px
+      flex-direction: row
+      flex-wrap: wrap
+      margin-right: 130px
+
+    &:last-child
+      max-width: 290px
+      margin-right: 50px
+
+  &__social
+    width: 100%
+    margin-bottom: 28px
+
+    a
+      margin: 0 11px
+
+      &:first-child
+        margin-left: 0
+
+      &:last-child
+        margin-right: 0
+
+      i
+        color: #5f667a
+        font-size: 24px
+
+  &__nav
+    a
+      display: inline-flex
+      align-items: center
+      margin-right: 35px
+      margin-bottom: 26px
+      font-family: $ralewayMedium
+      font-size: 16px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      color: #5f667a
+      text-decoration: underline
+
+      &:last-child
+        margin-right: 0
+
+      &:hover
+        text-decoration: none
+
+  &__copy
+    font-family: $ralewayRegular
+    font-size: 16px
+    font-weight: normal
+    font-style: normal
+    font-stretch: normal
+    line-height: 1.44
+    color: #5f667a
+
+  &__text
     width: 100%
     min-height: 110px
     font-family: $ralewayRegular
