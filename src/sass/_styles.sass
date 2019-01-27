@@ -10,12 +10,14 @@ a[title]
   padding: 0 10px
   width: 100%
 
+  outline: 1px solid red
+
 .container-small
   max-width: calc(1030px + 20px)
   margin: 0 auto
   padding: 0 10px
   width: 100%
-
+  outline: 1px solid blue
 .title
   font-family: $ralewayBold
   font-size: 40px
@@ -76,22 +78,71 @@ input
   &:hover
     background-color: darken($redColor, 10%)
 
+
 .checkbox
   display: inline-flex
   align-items: center
   margin-top: 23px
-  font-family: $ralewayLight
-  font-size: 16px
-  font-weight: normal
-  color: #5f667a
+
 
   input
     width: auto !important
     height: auto
 
+.form-group
+  display: inline-flex
+  align-items: center
+  margin-top: 31px
+
+  input
+    padding: 0
+    height: initial
+    width: initial
+    margin-bottom: 0
+    display: none
+    cursor: pointer
+
+  label
+    font-family: $ralewayLight
+    font-size: 16px
+    font-weight: normal
+    color: #5f667a
+    position: relative
+    cursor: pointer
+    width: 100% !important
+
+    &:before
+      content: ''
+      -webkit-appearance: none
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15)
+      width: 12px
+      height: 12px
+      display: inline-block
+      position: relative
+      top: -2px
+      vertical-align: middle
+      cursor: pointer
+      margin-right: 5px
+      border-radius: 2px
+      background: linear-gradient(to bottom, #e7e7e7, #dbdbdb) no-repeat 0 0
+  input:checked + label:after
+    content: ''
+    display: block
+    position: absolute
+    top: 7px
+    left: 5px
+    width: 2px
+    height: 6px
+    border: solid #5f667a
+    border-width: 0 2px 2px 0
+    transform: rotate(45deg)
+
+
+
 .free-quote
   width: 100%
   background: $blueColor
+
   &__flex
     width: 100%
     min-height: 144px
@@ -150,9 +201,11 @@ input
     line-height: 1.5
     color: #5f667a
     margin-top: 20px
+
 .some-call
   width: 100%
   background: $blueLightColor
+
   &__flex
     width: 100%
     min-height: 114px
@@ -174,9 +227,11 @@ input
     line-height: 1.29
     letter-spacing: normal
     color: $blueColor
+
   &.revert-call
     .some-call__title
       order: 2
+
     .btn
       order: 1
 

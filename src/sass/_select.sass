@@ -1,0 +1,79 @@
+@import "settings"
+@import "mixin"
+
+.select
+  width: 100%
+  position: relative
+
+  &__text
+    display: block
+    font-family: $ralewayLight
+    font-size: 15px
+    font-weight: normal
+    color: #5f667a
+    padding-bottom: 2px
+
+  &__head
+    width: 100%
+    -webkit-appearance: none
+    -moz-appearance: none
+    border: 1px solid #b0e3fe
+    padding: 0 14px
+    font-family: $ralewayRegular
+    font-size: 15px
+    font-weight: normal
+    color: #5f667a
+    height: 38px
+    line-height: 38px
+    border-radius: 5px
+    background-color: $whiteColor
+    cursor: pointer
+
+    &.arrow
+      position: relative
+
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        right: 14px
+        bottom: 15px
+        border-left: 4px solid transparent
+        border-right: 4px solid transparent
+        border-top: 5px solid #404040
+      &.open
+        border-radius: 5px 5px 0 0
+        &:after
+          content: ''
+          border-top: initial
+          border-left: 4px solid transparent
+          border-right: 4px solid transparent
+          border-bottom: 5px solid #404040
+
+  &__drop
+    display: none
+    position: absolute
+    top: calc(100% - 1px)
+    background-color: $whiteColor
+    width: 100%
+    border:
+      width: 0 1px 1px 1px
+      style: solid
+      color: #b0e3fe
+    border-radius: 0 0 5px 5px
+
+    .item
+      padding: 5px 14px
+      font-family: $ralewayRegular
+      font-size: 15px
+      font-weight: normal
+      color: #5f667a
+      transition: $transition
+      cursor: pointer
+
+      &:hover
+        background-color: lighten(#5f667a, 50%)
+
+
+    &.open
+      display: block
