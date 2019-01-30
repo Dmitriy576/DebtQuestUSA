@@ -1,8 +1,7 @@
 @import "settings"
 .banner
-  min-height: 833px
   background-image: linear-gradient(240deg, rgba(45, 149, 199, 0.83), rgba(159, 206, 229, 0.73) 54%, rgba(255, 255, 255, 0.83))
-  padding: 55px 0
+  padding: 25px 0
 
   .flex-banner-row
     width: 100%
@@ -10,24 +9,24 @@
     flex-direction: row
     flex-wrap: wrap
     justify-content: space-between
-    align-items: center
+    align-items: flex-start
 
     .cell
       width: calc(100% / 2)
       flex-direction: column
 
       &:first-child
-        padding: 65px 32px 65px 0
+        padding: 15px 32px 0 0
 
       .title
-        padding-bottom: 62px
+        padding-bottom: 22px
 
 .banner-list
   font-family: $ralewayBold
   font-size: 20px
   font-weight: normal
   color: $blueColor
-  margin-bottom: 50px
+  margin-bottom: 25px
 
   &__item
     margin-bottom: 20px
@@ -47,6 +46,7 @@
 
     img
       width: auto
+
 .plugin
   width: 100%
   max-width: 605px
@@ -60,26 +60,29 @@
 .main-form
   width: 100%
   max-width: 606px
-  min-height: 723px
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1)
   background-color: $blueLightColor
-  padding: 42px 32px 40px 32px
+  padding: 15px 25px 15px 25px
+
   &__title
     width: 100%
     font-family: $ralewayMedium
     font-size: 25px
     font-style: normal
     color: $blueColor
-    padding-bottom: 23px
+    padding-bottom: 13px
+
   &__labels
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+
     label,
     .select,
     .form-group
       width: calc(50% - 15px)
-      margin-bottom: 27px
+      margin-bottom: 12px
+
     span
       display: block
       font-family: $ralewayLight
@@ -89,13 +92,15 @@
       padding-bottom: 2px
 
   select,
-  input 
+  input
     width: 100%
-    height: 38px
+    height: 30px
     border-radius: 5px
     background-color: $whiteColor
+
   .btn
     margin: 0 auto
+
   &__text
     font-family: $ralewayRegular
     font-size: 12px
@@ -105,11 +110,15 @@
     line-height: 1.5
     letter-spacing: normal
     color: #5f667a
-    padding-top: 36px
+    padding-top: 15px
     display: inline-block
+
     a
       color: #223c8b
       text-decoration: underline
+
       &:hover
         text-decoration: none
-
+  .select__head
+    height: 30px
+    line-height: 30px
