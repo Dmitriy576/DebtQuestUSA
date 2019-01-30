@@ -11,7 +11,28 @@ let gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     iconfont = require('gulp-iconfont'),
     notify = require("gulp-notify"),
+    gutil = require('gulp-util'),
+    ftp = require('vinyl-ftp'),
     iconfontCss = require('gulp-iconfont-css');
+
+gulp.task('deploy', function() {
+  // host, user и password, тут всё как в FileZilla Client.
+  var conn = ftp.create({
+    host:      'files.000webhost.com',
+    user:      'debtq',
+    password:  '12121212',
+    parallel:  10,
+    log: gutil.log
+  });
+
+  var globs = [
+    'dist/**',
+    'dist/.htaccess',
+  ];
+  return gulp.src(globs, {buffer: false})
+      .pipe(conn.dest('/public_html/'));
+});
+
 
 gulp.task('browserSync', function () {
   browserSync({
