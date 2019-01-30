@@ -16,7 +16,7 @@ let gulp = require('gulp'),
     iconfontCss = require('gulp-iconfont-css');
 
 gulp.task('deploy', function() {
-  // host, user и password, тут всё как в FileZilla Client.
+  // https://debtq.000webhostapp.com/
   var conn = ftp.create({
     host:      'files.000webhost.com',
     user:      'debtq',
