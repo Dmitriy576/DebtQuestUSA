@@ -7,6 +7,15 @@
 #### Build
 - > gulp build
 
+#### Deploy to FTP
+
+- > Enter to gulpfile.js
+    host:      '',
+    user:      '',
+    password:  '',
+- > gulp build
+- > gulp deploy
+
 #### Start server on the 8080 port
 - > http://localhost:8080/
 
