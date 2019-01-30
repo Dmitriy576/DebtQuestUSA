@@ -15,12 +15,14 @@ a[title]
   margin: 0 auto
   padding: 0 10px
   width: 100%
+
 .title
   font-family: $ralewayBold
   font-size: 40px
   font-weight: normal
   color: $blueColor
   letter-spacing: 0.03rem
+  line-height: normal
 
 .title-h2
   font-family: $ralewayBold
@@ -73,8 +75,7 @@ input
     height: 42px
 
   &:hover
-    background-color: darken($redColor, 10%)
-
+    background-color: darken($redColor, 12%)
 
 .checkbox
   display: inline-flex
@@ -122,6 +123,7 @@ input
       margin-right: 5px
       border-radius: 2px
       background: linear-gradient(to bottom, #e7e7e7, #dbdbdb) no-repeat 0 0
+
   input:checked + label:after
     content: ''
     display: block
@@ -133,8 +135,6 @@ input
     border: solid #5f667a
     border-width: 0 2px 2px 0
     transform: rotate(45deg)
-
-
 
 .free-quote
   width: 100%
@@ -232,3 +232,52 @@ input
     .btn
       order: 1
 
+.nav
+  .drop
+    position: relative
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      left: 0
+      top: 100%
+      right: 0
+      height: 20px
+      background-color: transparent
+
+    &__block
+      position: absolute
+      top: calc(100% + 16px)
+      left: 0
+      width: auto
+      display: block
+      background-color: rgba(255, 255, 255, 0.85)
+      padding: 16px 22px 6px 16px
+      margin: 0
+      visibility: hidden
+      height: 0
+      z-index: -5
+      opacity: 0
+      transition: opacity ease 0.15s
+
+      a
+        font-family: $ralewayMedium
+        font-size: 15px
+        font-weight: normal
+        letter-spacing: 0.3px
+        text-align: center
+        color: #5f667a
+        white-space: nowrap
+        transition: $transition
+
+        &:hover
+          color: darken(#5f667a, 10%)
+
+    &:hover
+      .drop__block
+        visibility: visible
+        height: auto
+        z-index: initial
+        opacity: 1

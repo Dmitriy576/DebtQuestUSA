@@ -36,13 +36,32 @@
   </div>
   <nav class="nav">
     <div class="container">
-      <a href="">About Us</a>
-      <a href="">Services</a>
-      <a href="">Options</a>
-      <a href="">Results</a>
-      <a href="">Contact Us</a>
-      <a href="">Careers</a>
-      <a href="">Blog</a>
+      <span class="drop">
+        <a href="about-us.html">About Us</a>
+        <span class="drop__block">
+          <a href="#">Who we are</a>
+          <a href="#">Licenses & Accreditaions</a>
+          <a href="#">In the News</a>
+        </span>
+      </span>
+      <span>
+        <a href="">Services</a>
+      </span>
+      <span>
+        <a href="">Options</a>
+      </span>
+      <span>
+        <a href="">Results</a>
+      </span>
+      <span>
+        <a href="">Contact Us</a>
+      </span>
+      <span>
+        <a href="">Careers</a>
+      </span>
+      <span>
+        <a href="">Blog</a>
+      </span>
     </div>
   </nav>
 </header>
@@ -77,8 +96,7 @@
         <form class="main-form">
           <div class="main-form__title">Get Your FREE Consultation and Debt Quote.</div>
           <div class="main-form__labels">
-            <div class="select">
-              <div class="select__text">Debt Amount</div>
+            <div id="debtAmount" class="select">
               <div class="select__head arrow">
                 <span class="inner-text">Debt Amount</span>
               </div>
@@ -90,8 +108,7 @@
                 </div>
               </div>
             </div>
-            <div class="select">
-              <div class="select__text">The status of your payments?</div>
+            <div id="paymentsStatus" class="select">
               <div class="select__head arrow">
                 <span class="inner-text">Payments status</span>
               </div>
@@ -104,23 +121,23 @@
               </div>
             </div>
             <label>
-              <span>First Name</span>
+              <!--<span>First Name</span>-->
               <input type="text" placeholder="First Name">
             </label>
             <label>
-              <span>Last Name</span>
+              <!--<span>Last Name</span>-->
               <input type="text" placeholder="Last Name">
             </label>
             <label>
-              <span>Phone Number</span>
+              <!--<span>Phone Number</span>-->
               <input type="text" placeholder="Phone Number">
             </label>
             <label>
-              <span>Email Address</span>
+              <!--<span>Email Address</span>-->
               <input type="text" placeholder="Email Address">
             </label>
             <label>
-              <span>Zip Code</span>
+              <!--<span>Zip Code</span>-->
               <input type="text" placeholder="Zip Code">
             </label>
             <div class="form-group">
@@ -146,11 +163,11 @@ Consolidated Credit services and you are under no obligation to purchase anythin
 <section class="partners">
   <div class="container">
     <div class="partners__list">
-      <img src="img/main-page/blue-seal-250-52-national-debt-relief-llc-110899-1.jpg" alt="">
-      <img src="img/main-page/bitmap.jpg" alt="">
-      <img src="img/main-page/a-6850153-adaa-3-cb-4-b-24-c-8895-b-378-c-78-e.jpg" alt="">
-      <img src="img/main-page/image.jpg" alt="">
-      <img src="img/main-page/2018-tcr-blue-ribbon-graphic.jpg" alt="">
+      <img class="national-debt" src="img/main-page/blue-seal-250-52-national-debt-relief-llc-110899-1.jpg" alt="">
+      <img class="bitmap" src="img/main-page/bitmap.jpg" alt="">
+      <img class="secure" src="img/main-page/a-6850153-adaa-3-cb-4-b-24-c-8895-b-378-c-78-e.jpg" alt="">
+      <img class="trust" src="img/main-page/image.jpg" alt="">
+      <img class="ribbon" src="img/main-page/2018-tcr-blue-ribbon-graphic.jpg" alt="">
     </div>
   </div>
 </section>
@@ -307,7 +324,7 @@ Consolidated Credit services and you are under no obligation to purchase anythin
       </div>
       <div class="footer__cell">
         <div class="footer__nav">
-          <a href="">About Us</a>
+          <a href="about-us.html">About Us</a>
           <a href="">Options</a>
           <a href="">Contact Us</a>
           <a href="">Blog</a>

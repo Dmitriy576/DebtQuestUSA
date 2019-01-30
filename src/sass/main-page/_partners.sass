@@ -2,8 +2,9 @@
 @import "../mixin"
 .partners
   width: 100%
-  min-height: 128px
+  min-height: 100px
   background-color: #eef2f5
+
   &__list
     width: 100%
     display: flex
@@ -11,12 +12,29 @@
     flex-wrap: wrap
     justify-content: center
     align-items: center
-    min-height: 128px
+    min-height: 100px
+
     img
       width: auto
       margin: 0 23px
+
       &:last-child
         margin-right: 0
+
       &:first-child
         margin-left: 0
 
+      &.national-debt
+        max-width: 205px
+
+      &.bitmap
+        max-width: 119px
+
+      &.secure
+        max-width: 113px
+
+      &.trust
+        max-width: 138px
+
+      &.ribbon
+        max-width: 118px
