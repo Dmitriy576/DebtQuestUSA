@@ -82,22 +82,11 @@
     justify-content: center
     min-height: 48px
 
-  a
-    font-family: $ralewayMedium
-    font-size: 16px
-    font-weight: normal
-    letter-spacing: 0.3px
-    color: $whiteColor
-    display: flex
+  span
+    display: inline-block
     margin-left: 20px
     margin-right: 20px
-    line-height: 28px
     position: relative
-    transition: $transition
-
-    &:hover
-      color: rgba(255, 255, 255, .8)
-
     &:after
       content: ''
       display: block
@@ -108,14 +97,27 @@
       height: 28px
       width: 1px
       background: linear-gradient(transparent 0%, $whiteColor 50%, transparent 100%)
-
     &:first-child
       margin-left: 0
 
     &:last-child
       margin-right: 0
-
       &:after
         display: none
+  a
+    font-family: $ralewayMedium
+    font-size: 16px
+    font-weight: normal
+    letter-spacing: 0.3px
+    color: $whiteColor
+    display: flex
+    line-height: 28px
+    position: relative
+    transition: $transition
+
+    &:hover
+      color: rgba(255, 255, 255, .8)
+
+
 
 
