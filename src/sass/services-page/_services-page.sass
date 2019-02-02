@@ -1,4 +1,54 @@
 @import "../settings"
 @import "../mixin"
 .services
-  //
+  .info
+    &__cell
+      max-width: 530px
+
+    &__text
+      width: 100%
+
+    .title-h3
+      width: 100%
+
+
+.bankruptcy
+  &__flex
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 92px
+
+    .sub-flex
+      display: flex
+      align-items: center
+
+      &__cell
+        &:first-child
+          padding: 0 30px
+
+        &:last-child
+          width: 320px
+          flex-shrink: 0
+
+  &__cell
+    &:first-child
+      width: 100%
+      max-width: 392px
+      flex-shrink: 0
+
+      img
+        width: 100%
+        max-width: 392px
+    .title-h3
+      padding-bottom: 20px
+
+
+
+
+
+
+
+
