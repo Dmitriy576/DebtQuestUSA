@@ -40,6 +40,14 @@ a[title]
   letter-spacing: 0.6px
   color: $blueColor
 
+.title-red
+  font-family: $ralewayRegular
+  font-size: 32px
+  font-weight: normal
+  letter-spacing: 0.8px
+  color: $redColor
+  margin-bottom: 8px
+
 label,
 input
   &.arrow
@@ -281,3 +289,53 @@ input
         height: auto
         z-index: initial
         opacity: 1
+
+.terms
+  display: flex
+  justify-content: center
+  align-items: center
+  font-family: $ralewayRegular
+  font-size: 12px
+  font-weight: normal
+  letter-spacing: 0.3px
+  color: $blueColor
+  margin-bottom: 15px
+
+  a
+    display: inline-block
+    font-family: $ralewayRegular
+    font-size: 12px
+    line-height: 1
+    font-weight: normal
+    letter-spacing: 0.3px
+    color: #223c8b
+    padding-left: 4px
+    padding-right: 4px
+    border-right: 1px solid #223c8b
+
+    &:last-child
+      border-right: 0
+
+
+.decor
+  position: relative
+
+  &:before
+    content: ''
+    position: absolute
+    width: 200px
+    height: 100px
+    background: url("../img/girl.png") no-repeat 0 0
+    bottom: calc(100% - 30px)
+    left: 50%
+    transform: translate(-50%, 0)
+
+  &:after
+    content: ''
+    position: absolute
+    width: 105px
+    height: 200px
+    background: url("../img/postage-girl.png") no-repeat 0 0
+    top: 140px
+    right: calc(100% - 43px)
+

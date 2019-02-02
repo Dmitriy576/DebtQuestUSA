@@ -2,8 +2,6 @@
   $(document).ready(function () {
     var debtAmount = $('#debtAmount .select__head');
     var debtAmountDrop = $('#debtAmount .select__drop');
-    var paymentsStatus = $('#paymentsStatus .select__head');
-    var paymentsStatusDrop = $('#paymentsStatus .select__drop');
 
     debtAmount.on('click', function () {
       $(this).siblings('.select__drop').toggleClass('open');
@@ -20,6 +18,9 @@
       debtAmountDrop.toggleClass('open');
     });
     //
+    var paymentsStatus = $('#paymentsStatus .select__head');
+    var paymentsStatusDrop = $('#paymentsStatus .select__drop');
+
     paymentsStatus.on('click', function () {
       $(this).siblings('.select__drop').toggleClass('open');
       $(this).toggleClass('open');
@@ -34,10 +35,24 @@
       paymentsStatus.toggleClass('open');
       paymentsStatusDrop.toggleClass('open');
     });
+    //
+    var debtSelect = $('#debtSelect .select__head');
+    var debtSelectDrop = $('#debtSelect .select__drop');
+    debtSelect.on('click', function () {
+      $(this).siblings('.select__drop').toggleClass('open');
+      $(this).toggleClass('open');
+    });
+    var debtSelectItems = $('#debtSelect .select__drop .item');
+    debtSelectItems.on('click', function (){
+      debtSelectItems.removeClass('active');
+      $(this).addClass('active');
+      console.log($(this).text());
+      var rep_text = $(this).text();
+      $('#debtSelect .inner-text.inner-text').text(rep_text);
+      debtSelect.toggleClass('open');
+      debtSelectDrop.toggleClass('open');
+    });
   });
-
-
-
 
   $(document).click(function () {
     var selectHead = $('#debtAmount .select__head');
