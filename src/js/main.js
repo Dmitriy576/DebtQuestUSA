@@ -55,8 +55,8 @@
   });
 
   $(document).click(function () {
-    var selectHead = $('#debtAmount .select__head');
-    var selectDrop = $('#debtAmount .select__drop');
+    var selectHead = $('.select__head');
+    var selectDrop = $('.select__drop');
     if (!$(event.target).closest('.select').length) {
       selectHead.removeClass('open');
       selectDrop.removeClass('open');
