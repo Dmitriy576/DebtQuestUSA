@@ -15,9 +15,11 @@
   <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/favicon.png"/>
   <link rel="stylesheet" href="css/libs.min.css"/>
   <link rel="stylesheet" href="css/all.css"/>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6GzzDTQPqNH09O5ZFfzaNHdmweOuGs_Y"></script>
 </head>
 <body>
-<header class="header">
+<header style="display: none;" class="header">
   <div class="container">
     <div class="flex-row">
       <div class="cell">
@@ -66,7 +68,7 @@
   </nav>
 </header>
 <main class="contact-us">
-  <section class="banner banner-pages">
+  <section style="display: none;" class="banner banner-pages">
     <div class="container">
       <div class="flex-banner-row">
         <div class="cell">
@@ -138,8 +140,19 @@
       </div>
     </div>
   </section>
-  <section class="map">map</section>
-  <section class="current-client">
+
+  <div id="google-maps"></div>
+  <div id="state"></div>
+  <div id="city"></div>
+
+  <!--<section id="map" class="map">-->
+    <!--<ul class="overlay">-->
+      <!--<li>Place 1</li>-->
+      <!--<li>Place 2</li>-->
+      <!--<li>Place 3</li>-->
+    <!--</ul>-->
+  <!--</section>-->
+  <section style="display: none;" class="current-client">
     <div class="container">
       <div class="current-client__cell">
         <div class="current-client__content">
@@ -171,7 +184,7 @@
       </div>
     </div>
   </section>
-  <section class="corporate-inquiries">
+  <section style="display: none;" class="corporate-inquiries">
     <h3 class="title-h3">Corporate Inquiries:</h3>
     <div class="desc">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -207,7 +220,7 @@
       </div>
     </div>
   </section>
-  <section class="free-quote">
+  <section style="display: none;" class="free-quote">
     <div class="container">
       <div class="free-quote__flex">
         <div class="free-quote__title">
@@ -217,7 +230,7 @@
       </div>
     </div>
   </section>
-  <section class="creditors">
+  <section style="display: none;" class="creditors">
     <div class="container">
       <div class="title-h3">We know what we are doing</div>
       <div class="creditors__text">
@@ -234,7 +247,7 @@
     </div>
   </section>
 </main>
-<footer class="footer">
+<footer style="display: none;" class="footer">
   <div class="container">
     <div class="footer__row">
       <div class="footer__cell">
@@ -274,6 +287,7 @@
   </div>
 </footer>
 <script src="js/libs.min.js"></script>
+<script src="js/map.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
