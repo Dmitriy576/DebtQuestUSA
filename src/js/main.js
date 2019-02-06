@@ -62,6 +62,21 @@
       selectDrop.removeClass('open');
     }
   });
+
+
+
+  let playVideo = false;
+
+  $('.play').click(function () {
+    if (!playVideo) {
+      $('video').trigger('play');
+    } else {
+      $('video').trigger('pause');
+    }
+    playVideo = !playVideo;
+  });
+
+
 })();
 
 

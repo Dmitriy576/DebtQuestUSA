@@ -158,10 +158,17 @@ function initialize() {
 }
 function addMarker(draftMarker, bounds) {
   let myLatLng = new google.maps.LatLng(draftMarker.lat, draftMarker.lng);
+  let image = {
+    url: 'https://cache.fivebelow.com/media/catalog/swatches/1/35x35/media/wwebrie.png',
+    // This marker is 20 pixels wide by 32 pixels high.
+    size: new google.maps.Size(120, 132),
+  };
   let marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: draftMarker.message
+    title: draftMarker.message,
+    icon: image,
+    animation: google.maps.Animation.DROP,
   });
   bounds.extend(marker.position);
 
