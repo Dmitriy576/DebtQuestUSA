@@ -2,12 +2,14 @@
 .banner
   background-image: linear-gradient(240deg, rgba(45, 149, 199, 0.83), rgba(159, 206, 229, 0.73) 54%, rgba(255, 255, 255, 0.83))
   padding: 25px 0
+  @media screen and (max-width: 900px)
+    padding-top: 52px
+    padding-bottom: 36px
 
   .flex-banner-row
     width: 100%
     display: flex
     flex-direction: row
-    flex-wrap: wrap
     justify-content: space-between
     align-items: flex-start
 
@@ -17,15 +19,33 @@
 
       &:first-child
         padding: 15px 32px 0 0
+        @media screen and (max-width: 1200px)
+          padding-top: 94px
+          width: 100%
+
+      &:last-child
+        width: 368px
+        flex-shrink: 0
+        @media screen and (max-width: 1200px)
+          display: flex
+          justify-content: flex-end
 
       .title
         padding-bottom: 18px
         font-size: 36px
+        @media screen and (max-width: 1200px)
+          font-size: 26px
+          font-weight: normal
+          line-height: 1.46
+          letter-spacing: 1.1px
+          padding-bottom: 35px
+
   &.banner-pages
     width: 100%
     min-height: 594px
     background: #eef2f5
     padding-top: 45px
+
     .select
       width: 100%
 
@@ -45,22 +65,37 @@
   font-weight: normal
   color: $blueColor
   margin-bottom: 25px
+  @media screen and (max-width: 1200px)
+    font-size: 14px
+    line-height: 1.71
+    letter-spacing: 0.3px
+    margin-bottom: 32px
 
   &__item
     margin-bottom: 15px
     width: 100%
     display: flex
     align-items: center
+    @media screen and (max-width: 1200px)
+      margin-bottom: 22px
 
   &__img
     width: 50px
+    min-width: 50px
     height: 50px
+    min-height: 50px
     border-radius: 50%
     background-color: $yellowColor
     display: flex
     align-items: center
     justify-content: center
     margin-right: 10px
+    @media screen and (max-width: 1200px)
+      min-width: 44px
+      width: 44px
+      min-height: 44px
+      height: 44px
+      margin-right: 12px
 
     img
       width: auto
@@ -81,6 +116,9 @@
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1)
   background-color: $blueLightColor
   padding: 15px 25px 15px 25px
+  @media screen and (max-width: 900px)
+    max-width: 368px
+    padding: 24px 30px
 
   &__title
     width: 100%
@@ -89,6 +127,12 @@
     font-style: normal
     color: $blueColor
     padding-bottom: 13px
+    @media screen and (max-width: 1200px)
+      font-size: 22px
+      font-stretch: normal
+      line-height: 1.45
+      text-align: center
+      padding-bottom: 24px
 
   &__labels
     display: flex
@@ -100,9 +144,17 @@
     .form-group
       width: calc(50% - 15px)
       margin-bottom: 18px
+      @media screen and (max-width: 1200px)
+        width: 100%
+        margin-bottom: 14px
 
     .form-group
       margin-top: 4px
+
+    .tablet-50
+      @media screen and (max-width: 1200px)
+        width: calc(50% - 15px)
+        margin-top: 0
 
     span
       display: block
@@ -121,6 +173,10 @@
 
   .btn
     margin: 0 auto 12px auto
+    @media screen and (max-width: 1200px)
+      min-height: 48px
+      border-radius: 5px
+      font-size: 18px
 
   &__text
     font-family: $ralewayRegular
@@ -132,6 +188,8 @@
     letter-spacing: normal
     color: #5f667a
     display: inline-block
+    @media screen and (max-width: 1200px)
+      text-align: center
 
     a
       color: #223c8b
@@ -139,6 +197,19 @@
 
       &:hover
         text-decoration: none
+
+    .hide-desc
+      display: none
+      @media screen and (max-width: 1200px)
+        display: inline-block
+        color: $blueColor
+        text-decoration: underline
+        cursor: pointer
+        font-family: $ralewayBold
+
+    .hide-tablet
+      @media screen and (max-width: 1200px)
+        display: none
 
   .select__head
     height: 30px

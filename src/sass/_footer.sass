@@ -6,19 +6,26 @@
   background: #eef2f5
   padding: 28px 0 22px 0
 
-  img
-    width: auto
+  .container
+    outline: 1px solid red
 
+  &__logo
+    display: inline-block
+    @media screen and (max-width: 1200px)
+      max-width: 118px
+    img
+      @media screen and (max-width: 1200px)
+        width: 100%
   &__row
     width: 100%
-    min-height: 150px
     display: flex
     flex-direction: row
     flex-wrap: nowrap
-    justify-content: center
     align-items: flex-start
     padding-bottom: 52px
     position: relative
+    @media screen and (max-width: 1200px)
+      flex-wrap: wrap
 
     &:after
       content: ''
@@ -31,19 +38,9 @@
 
   &__cell
     &:first-child
-      max-width: 128px
-      margin-right: 58px
-      margin-left: 90px
-
-    &:nth-child(2)
-      max-width: 405px
-      flex-direction: row
-      flex-wrap: wrap
-      margin-right: 130px
-
-    &:last-child
-      max-width: 290px
-      margin-right: 50px
+      padding-left: 131px
+      display: flex
+      align-items: center
 
   &__social
     width: 100%
@@ -66,6 +63,7 @@
         font-size: 24px
 
   &__nav
+    padding-left: 58px
     a
       display: inline-flex
       align-items: center

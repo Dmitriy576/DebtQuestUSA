@@ -19,7 +19,7 @@
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6GzzDTQPqNH09O5ZFfzaNHdmweOuGs_Y"></script>
 </head>
 <body>
-<header style="display: none;" class="header">
+<header class="header">
   <div class="container">
     <div class="flex-row">
       <div class="cell">
@@ -68,7 +68,7 @@
   </nav>
 </header>
 <main class="contact-us">
-  <section style="display: none;" class="banner banner-pages">
+  <section class="banner banner-pages">
     <div class="container">
       <div class="flex-banner-row">
         <div class="cell">
@@ -142,18 +142,17 @@
   </section>
   <div class="map-wrapper">
     <div id="google-maps"></div>
-    <div id="state"></div>
-    <div id="city"></div>
-  </div>
-  <div class="video">
-    <div class="play" style="text-align: center;background-color: #cccccc;cursor: pointer;padding: 10px;">
-      play/stop
+    <div class="select-wrapper">
+      <div class="select-wrapper__title">
+        Our Office in Your City
+      </div>
+      <div class="select-wrapper__row">
+        <div class="select-wrapper__item" id="state"></div>
+        <div class="select-wrapper__item" id="city"></div>
+      </div>
     </div>
-    <video style="width: 50%;" src="video/КБ.mp4"></video>
   </div>
-  
-  
-  <section style="display: none;" class="current-client">
+  <section class="current-client">
     <div class="container">
       <div class="current-client__cell">
         <div class="current-client__content">
@@ -185,7 +184,7 @@
       </div>
     </div>
   </section>
-  <section style="display: none;" class="corporate-inquiries">
+  <section class="corporate-inquiries">
     <h3 class="title-h3">Corporate Inquiries:</h3>
     <div class="desc">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -221,7 +220,7 @@
       </div>
     </div>
   </section>
-  <section style="display: none;" class="free-quote">
+  <section class="free-quote">
     <div class="container">
       <div class="free-quote__flex">
         <div class="free-quote__title">
@@ -231,7 +230,7 @@
       </div>
     </div>
   </section>
-  <section style="display: none;" class="creditors">
+  <section class="creditors">
     <div class="container">
       <div class="title-h3">We know what we are doing</div>
       <div class="creditors__text">
@@ -248,7 +247,7 @@
     </div>
   </section>
 </main>
-<footer style="display: none;" class="footer">
+<footer class="footer">
   <div class="container">
     <div class="footer__row">
       <div class="footer__cell">

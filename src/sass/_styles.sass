@@ -9,13 +9,18 @@ a[title]
   margin: 0 auto
   padding: 0 10px
   width: 100%
+  @media screen and (max-width: 1200px)
+    padding-left: 28px
+    padding-right: 28px
 
 .container-small
   max-width: calc(1030px + 20px)
   margin: 0 auto
   padding: 0 10px
   width: 100%
-
+  @media screen and (max-width: 1200px)
+    padding-left: 28px
+    padding-right: 28px
 .container-medium
   max-width: calc(1090px + 20px)
   margin: 0 auto
@@ -52,6 +57,10 @@ a[title]
   line-height: 1.11
   letter-spacing: 0.6px
   color: $blueColor
+  @media screen and (max-width: 1200px)
+    font-size: 26px
+    line-height: 1.54
+    letter-spacing: 0.4px
 
 .title-red
   font-family: $ralewayRegular
@@ -60,6 +69,7 @@ a[title]
   letter-spacing: 0.8px
   color: $redColor
   margin-bottom: 8px
+
 .title-red-sm
   font-family: $ralewayRegular
   font-size: 26px
@@ -98,6 +108,11 @@ input
   color: $whiteColor
   transition: $transition
   border: 0
+  @media screen and (max-width: 1200px)
+    height: 48px
+    border-radius: 5px
+    font-size: 18px
+    letter-spacing: 0.3px
 
   &.sm-btn
     height: 42px
@@ -136,6 +151,8 @@ input
     position: relative
     cursor: pointer
     width: 100% !important
+    @media screen and (max-width: 900px)
+      font-size: 14px
 
     &:before
       content: ''
@@ -163,6 +180,8 @@ input
     border: solid #5f667a
     border-width: 0 2px 2px 0
     transform: rotate(45deg)
+    @media screen and (max-width: 900px)
+      top: 5px
 
 .free-quote
   width: 100%
@@ -178,6 +197,10 @@ input
     align-items: center
     padding-left: 62px
     padding-right: 62px
+    @media screen and (max-width: 900px)
+      min-height: 124px
+      padding-left: 0
+      padding-right: 0
 
   &__title
     max-width: 736px
@@ -189,6 +212,11 @@ input
     line-height: 1.29
     letter-spacing: normal
     color: $whiteColor
+    @media screen and (max-width: 1200px)
+      font-size: 24px
+      line-height: 1.42
+      max-width: 372px
+
 
   &.revert
     .free-quote__title
@@ -200,23 +228,38 @@ input
 .info
   &__flex
     width: 100%
-    min-height: 350px
     display: flex
     flex-direction: row
     justify-content: space-between
     align-items: center
     margin-bottom: 92px
 
+
     &.info-revert
       .info__cell
         &:first-child
           order: 2
+          .info__text
+            @media screen and (max-width: 1200px)
+              padding-right: 0
+              padding-left: 24px
+          .title-h3
+            @media screen and (max-width: 1200px)
+              padding-right: 0
+              padding-left: 24px
+
 
         &:last-child
           order: 1
 
     img
       width: auto
+      @media screen and (max-width: 1200px)
+        width: 100%
+
+  &__cell
+    @media screen and (max-width: 1200px)
+      width: 50%
 
   &__text
     max-width: 500px
@@ -226,6 +269,11 @@ input
     line-height: 1.5
     color: #5f667a
     margin-top: 20px
+
+    @media screen and (max-width: 1200px)
+      margin-top: 16px
+      font-size: 16px
+      padding-right: 24px
 
 .info-medium
   &__flex
@@ -280,17 +328,22 @@ input
     align-items: center
     padding-left: 62px
     padding-right: 62px
+    @media screen and (max-width: 1200px)
+      padding-left: 0
+      padding-right: 0
 
   &__title
     max-width: 736px
     font-family: $ralewaySemiBold
     font-size: 34px
     font-weight: normal
-    font-style: normal
-    font-stretch: normal
     line-height: 1.29
-    letter-spacing: normal
     color: $blueColor
+    @media screen and (max-width: 1200px)
+      font-size: 24px
+      line-height: 1.42
+  .btn
+    border-radius: 0
 
   &.revert-call
     .some-call__title
@@ -378,6 +431,7 @@ input
   color: $blueColor
   margin-bottom: 15px
 
+
   a
     display: inline-block
     font-family: $ralewayRegular
@@ -392,7 +446,6 @@ input
 
     &:last-child
       border-right: 0
-
 
 .decor
   position: relative

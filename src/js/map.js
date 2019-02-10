@@ -1,22 +1,20 @@
 let map;
-let mapCity;
 let info = new google.maps.InfoWindow();
 let gmarkers = [];
-let gmarkersCity = [];
 
 const markers = [
   {
-    country: 'France',
-    city: 'Paris',
-    lat: 52.2082716,
-    lng: 21.0218746,
+    country: 'Kiev',
+    city: 'Вишневое',
+    lat: 50.397376,
+    lng: 30.375665,
     message: 'test 1'
   },
   {
-    country: 'France',
-    city: 'Paris',
-    lat: 52.1101935,
-    lng: 21.0220677,
+    country: 'Kiev',
+    city: 'Airport',
+    lat: 50.412123,
+    lng: 30.443236,
     message: 'test 2'
   },
   {
@@ -28,7 +26,7 @@ const markers = [
   },
   {
     country: 'USA',
-    city: 'New York',
+    city: 'New York 2',
     lat: 51.4063448,
     lng: 21.155306,
     message: 'test 223232'
@@ -140,8 +138,8 @@ function reRenderMarkers() {
 function initialize() {
   let mapOptions = {
     scrollwheel: true,
-    zoom: 11,
-    center: new google.maps.LatLng(52.2081935, 21.0220677)
+    center: new google.maps.LatLng(52.2081935, 21.0220677),
+    zoom: 8,
   };
   map = new google.maps.Map(document.getElementById('google-maps'), mapOptions);
 
@@ -150,17 +148,11 @@ function initialize() {
     addMarker(marker, bounds);
   });
   map.fitBounds(bounds);
-
-
- // google.maps.event.trigger(gmarkers[2], 'click');
-  //map.setCenter(gmarkers[2].getPosition());
-
 }
 function addMarker(draftMarker, bounds) {
   let myLatLng = new google.maps.LatLng(draftMarker.lat, draftMarker.lng);
   let image = {
-    url: 'https://cache.fivebelow.com/media/catalog/swatches/1/35x35/media/wwebrie.png',
-    // This marker is 20 pixels wide by 32 pixels high.
+    url: 'https://i.ibb.co/k33DmzW/shape.png',
     size: new google.maps.Size(120, 132),
   };
   let marker = new google.maps.Marker({
@@ -185,6 +177,5 @@ function myclick(i) {
   map.setCenter(gmarkers[i].getPosition());
   google.maps.event.trigger(gmarkers[i], "click");
 }
-
 
 google.maps.event.addDomListener(window, 'load', initialize);

@@ -184,3 +184,55 @@
   width: 100%
   margin: 0
   padding: 0
+  .gmnoprint
+    display: none
+
+.map-wrapper
+  position: relative
+  width: 100%
+  .select-wrapper
+    position: absolute
+    left: 100px
+    top: 16px
+    width: 100%
+    max-width: 560px
+    min-height: 131px
+    background-color: rgba(255, 255, 255, 0.7)
+    padding: 24px
+    &__title
+      font-family: $ralewayBold
+      font-size: 24px
+      font-weight: normal
+      letter-spacing: 0.3px
+      color: $blueColor
+      margin-bottom: 16px
+    &__row
+      display: flex
+      width: 100%
+      justify-content: space-between
+      align-items: center
+    &__item
+      width: calc(50% - 8px)
+      height: 30px
+      border-radius: 5px
+      position: relative
+      &:after
+        content: ''
+        top: 13px
+        display: block
+        position: absolute
+        right: 14px
+        bottom: 11px
+        border-left: 4px solid transparent
+        border-right: 4px solid transparent
+        border-top: 5px solid #404040
+      select
+        width: 100%
+        font-family: $ralewayRegular
+        font-size: 15px
+        font-weight: normal
+        color: #5f667a
+        height: 30px
+
+
+

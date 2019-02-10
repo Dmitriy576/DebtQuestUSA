@@ -63,20 +63,19 @@
     }
   });
 
-
-
   let playVideo = false;
-
   $('.play').click(function () {
     if (!playVideo) {
-      $('video').trigger('play');
+      $('.video-banner video').trigger('play');
     } else {
-      $('video').trigger('pause');
+      $('.video-banner video').trigger('pause');
     }
     playVideo = !playVideo;
   });
 
-
+  $('.hide-desc').click(function () {
+    $('.hide-tablet').slideToggle();
+  })
 })();
 
 

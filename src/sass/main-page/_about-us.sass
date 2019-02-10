@@ -3,24 +3,46 @@
 .about-us
   width: 100%
   padding: 96px
+  @media screen and (max-width: 1200px)
+    padding: 72px 0 60px 0
 
   &__wrap
     width: 100%
-    min-height: 48px
     display: flex
     justify-content: center
     align-items: center
     margin-bottom: 32px
+    @media screen and (max-width: 1200px)
+      margin-bottom: 24px
 
     .title-h2
       display: flex
       line-height: 1.5
+      flex-wrap: wrap
+      @media screen and (max-width: 1200px)
+        text-align: center
+        font-size: 26px
+        line-height: 1.54
+        letter-spacing: 0.4px
 
       i
         object-fit: contain
         color: #ffb85b
         font-size: 47px
         margin-right: 24px
+        width: 100%
+
+        @media screen and (max-width: 1200px)
+          margin: 0 auto
+          order: 2
+
+      span
+        @media screen and (max-width: 1200px)
+          display: block
+          margin: 0 auto 20px auto
+          width: 100%
+          max-width: 431px
+          order: 1
 
   &__text
     width: 100%
@@ -33,10 +55,11 @@
       font-family: $ralewayRegular
       font-size: 20px
       font-weight: normal
-      font-style: normal
-      font-stretch: normal
       line-height: 1.5
-      letter-spacing: normal
       color: #5f667a
+      @media screen and (max-width: 1200px)
+        font-size: 16px
+        line-height: 1.63
+
       &:last-child
         margin-right: 0
