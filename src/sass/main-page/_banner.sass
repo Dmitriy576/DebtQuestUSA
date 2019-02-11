@@ -2,9 +2,11 @@
 .banner
   background-image: linear-gradient(240deg, rgba(45, 149, 199, 0.83), rgba(159, 206, 229, 0.73) 54%, rgba(255, 255, 255, 0.83))
   padding: 25px 0
-  @media screen and (max-width: 900px)
+  @media screen and (max-width: 1200px)
     padding-top: 52px
     padding-bottom: 36px
+  @media screen and (max-width: 1200px)
+    padding-top: 32px
 
   .flex-banner-row
     width: 100%
@@ -12,6 +14,8 @@
     flex-direction: row
     justify-content: space-between
     align-items: flex-start
+    @media screen and (max-width: 650px)
+      flex-wrap: wrap
 
     .cell
       width: calc(100% / 2)
@@ -22,13 +26,22 @@
         @media screen and (max-width: 1200px)
           padding-top: 94px
           width: 100%
+        @media screen and (max-width: 650px)
+          padding: 0
+          order: 2
+          width: 100%
 
       &:last-child
-        width: 368px
-        flex-shrink: 0
         @media screen and (max-width: 1200px)
           display: flex
           justify-content: flex-end
+          width: 368px
+          flex-shrink: 0
+        @media screen and (max-width: 760px)
+          width: 50%
+        @media screen and (max-width: 650px)
+          order: 1
+          width: 100%
 
       .title
         padding-bottom: 18px
@@ -70,6 +83,11 @@
     line-height: 1.71
     letter-spacing: 0.3px
     margin-bottom: 32px
+  @media screen and (max-width: 650px)
+    line-height: 1.57
+    padding-left: 20px
+  @media screen and (max-width: 370px)
+    padding-left: 0
 
   &__item
     margin-bottom: 15px
@@ -116,9 +134,16 @@
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1)
   background-color: $blueLightColor
   padding: 15px 25px 15px 25px
-  @media screen and (max-width: 900px)
+  @media screen and (max-width: 1200px)
     max-width: 368px
     padding: 24px 30px
+  @media screen and (max-width: 760px)
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1)
+    background-color: rgba(209, 240, 255, 0.8)
+  @media screen and (max-width: 650px)
+    padding: 24px 24px 32px 24px
+    max-width: 100%
+    margin-bottom: 28px
 
   &__title
     width: 100%
@@ -133,6 +158,11 @@
       line-height: 1.45
       text-align: center
       padding-bottom: 24px
+    @media screen and (max-width: 650px)
+      font-size: 20px
+      line-height: 1.5
+      text-align: center
+      padding-bottom: 16px
 
   &__labels
     display: flex
@@ -177,6 +207,14 @@
       min-height: 48px
       border-radius: 5px
       font-size: 18px
+    @media screen and (max-width: 650px)
+      font-size: 18px
+      font-style: normal
+      letter-spacing: 0.3px
+      text-align: center
+      border-radius: 0
+      padding-left: 35px
+      padding-right: 35px
 
   &__text
     font-family: $ralewayRegular
@@ -190,6 +228,8 @@
     display: inline-block
     @media screen and (max-width: 1200px)
       text-align: center
+    @media screen and (max-width: 650px)
+      text-align: left
 
     a
       color: #223c8b

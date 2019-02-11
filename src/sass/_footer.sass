@@ -5,17 +5,34 @@
   min-height: 340px
   background: #eef2f5
   padding: 28px 0 22px 0
+  @media screen and (max-width: 1200px)
+    padding-top: 32px
+    padding-bottom: 24px
 
   .container
-    outline: 1px solid red
+    @media screen and (max-width: 1200px)
+      padding-left: 28px
+      padding-right: 28px
+
+    @media screen and (max-width: 600px)
+      padding-left: 17px
+      padding-right: 17px
 
   &__logo
     display: inline-block
+    flex-shrink: 0
     @media screen and (max-width: 1200px)
-      max-width: 118px
+      max-width: 117px
+    @media screen and (max-width: 600px)
+      max-width: 157px
+      width: 157px
+      height: 157px
+      margin-bottom: 30px
+
     img
       @media screen and (max-width: 1200px)
         width: 100%
+
   &__row
     width: 100%
     display: flex
@@ -34,21 +51,44 @@
       margin-bottom: 28px
       width: 90%
       min-height: 1px
+      left: 50%
+      transform: translate(-50%, 0)
       background-image: linear-gradient(to right, #e5e5e5, #aaaaaa 25%, #95a0bf 48%, #aaaaaa 71%, #e5e5e5)
+      @media screen and (max-width: 600px)
+        width: 100%
+
 
   &__cell
     &:first-child
       padding-left: 131px
       display: flex
       align-items: center
+      @media screen and (max-width: 1200px)
+        padding-left: 21px
+      @media screen and (max-width: 600px)
+        padding-left: 0
+        flex-wrap: wrap
+        justify-content: center
+
+    &:last-child
+      padding-top: 28px
+      @media screen and (max-width: 1200px)
+        width: 100%
+        text-align: center
+        padding-top: 32px
+      @media screen and (max-width: 480px)
+        padding-top: 14px
 
   &__social
     width: 100%
     margin-bottom: 28px
+    @media screen and (max-width: 1200px)
+      margin-bottom: 20px
 
     a
       margin: 0 11px
       color: #5f667a
+      display: inline-block
 
       &:hover
         color: darken(#5f667a, 8%)
@@ -61,14 +101,33 @@
 
       i
         font-size: 24px
+        @media screen and (max-width: 1200px)
+          font-size: 20px
 
   &__nav
-    padding-left: 58px
+    padding: 10px 203px 0 58px
+    @media screen and (max-width: 1200px)
+      padding-right: 0
+      padding-left: 47px
+    @media screen and (max-width: 600px)
+      padding: 0
+    @media screen and (max-width: 480px)
+      display: flex
+      width: 100%
+      flex-wrap: wrap
+
+    span
+      display: inline-flex
+      align-items: center
+      margin: 13px 35px 13px 0
+      @media screen and (max-width: 600px)
+        margin: 0 22px 26px 22px
+      @media screen and (max-width: 480px)
+        margin: 0 0 26px 0
+        width: calc(100% / 3)
     a
       display: inline-flex
       align-items: center
-      margin-right: 35px
-      margin-bottom: 26px
       font-family: $ralewayMedium
       font-size: 16px
       font-weight: normal
@@ -76,9 +135,6 @@
       font-stretch: normal
       color: #5f667a
       text-decoration: underline
-
-      &:last-child
-        margin-right: 0
 
       &:hover
         text-decoration: none
@@ -100,3 +156,6 @@
     font-weight: normal
     line-height: 1.57
     color: #5f667a
+    @media screen and (max-width: 600px)
+      font-size: 12px
+      line-height: 1.83

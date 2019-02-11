@@ -6,6 +6,8 @@
   @media screen and (max-width: 1200px)
     padding-top: 72px
     padding-bottom: 0
+  @media screen and (max-width: 760px)
+    padding-top: 60px
 
   .title-h3
     text-align: center
@@ -16,6 +18,11 @@
       letter-spacing: 0.4px
       text-align: center
       margin-bottom: 16px
+    @media screen and (max-width: 760px)
+      font-size: 24px
+      line-height: 1.42
+      letter-spacing: 0.4px
+      margin-bottom: 20px
 
   &__text
     width: 100%
@@ -37,10 +44,13 @@
       text-align: center
       max-width: 545px
       padding-bottom: 32px
+    @media screen and (max-width: 760px)
+      line-height: 1.5
+      max-width: 100%
+      text-align: center
 
   &__flex
     width: 100%
-    min-height: 44px
     display: flex
     flex-direction: row
     flex-wrap: wrap
@@ -49,21 +59,34 @@
     @media screen and (max-width: 1200px)
       margin-bottom: 50px
 
+    @media screen and (max-width: 760px)
+      margin-bottom: 72px
     img
       margin: 0 32px
       width: auto
+      @media screen and (max-width: 1200px)
+        width: auto
+        margin: 0 16px 10px 16px
+      @media screen and (max-width: 760px)
+        margin-left: 12px
+        margin-right: 12px
+
       &.debt-relief
         @media screen and (max-width: 1200px)
           max-width: 114px
+
       &.bitmap
         @media screen and (max-width: 1200px)
           max-width: 76px
+
       &.overall
         @media screen and (max-width: 1200px)
           max-width: 52px
+
       &.image
         @media screen and (max-width: 1200px)
           max-width: 105px
+
       &.tcr-blue
         @media screen and (max-width: 1200px)
           max-width: 167px
@@ -74,6 +97,4 @@
       &:last-child
         margin-right: 0
 
-      @media screen and (max-width: 1200px)
-        width: auto
-        margin: 0 16px 10px 16px
+

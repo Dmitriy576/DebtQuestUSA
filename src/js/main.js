@@ -75,6 +75,10 @@
 
   $('.hide-desc').click(function () {
     $('.hide-tablet').slideToggle();
+  });
+
+  $('.menu-button').click(function () {
+    $('.nav').toggleClass('open');
   })
 })();
 
