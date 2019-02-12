@@ -97,7 +97,7 @@
       min-width: 193px
       height: 44px
       border-radius: 22px
-      background-color: #49b278
+      background-color: $greenColor
       font-family: $latoBlack
       font-size: 18px
       letter-spacing: 0.2px
@@ -119,7 +119,10 @@
         font-size: 12px
 
       &:hover
-        background-color: darken($greenColor, 5%)
+        background-color: $greenHoverColor
+
+      &:active
+        background-color: $greenActiveColor
 
       strong
         font-weight: normal
@@ -160,28 +163,9 @@
     @media screen and (max-width: 760px)
       display: flex
 
-    .burger
-      display: flex
-      align-items: center
-      justify-content: center
-      flex-wrap: wrap
-      flex-direction: column
-      margin-left: 8px
-
-      i
-        display: block
-        width: 16px
-        height: 2px
-        background-color: $blueColor
-        margin-bottom: 4px
-
-        &:last-child
-          margin-bottom: 0
-
 .nav
   width: 100%
   background-color: $blueColor
-
   @media screen and (max-width: 760px)
     transform: scaleY(0)
     transform-origin: top
@@ -193,8 +177,11 @@
     right: 0
     width: 100%
     padding: 20px 0
+    background-color: $whiteColor
+    min-height: calc(100vh - 95px)
 
   &.open
+    position: relative
     @media screen and (max-width: 760px)
       transform: scaleY(1)
       opacity: 1
@@ -218,7 +205,7 @@
       width: 100%
       margin: 0
       padding: 0
-      text-align: center
+      text-align: left
 
     &:after
       content: ''
@@ -247,17 +234,79 @@
     letter-spacing: 0.3px
     color: $whiteColor
     display: flex
-    line-height: 28px
+    line-height: 1
     position: relative
     transition: $transition
+    padding-top: 5px
+    padding-bottom: 5px
     @media screen and (max-width: 760px)
-      text-align: center
+      text-align: left
       display: block
-      padding: 5px 10px
+      padding: 0 10px 0 44px
+      color: #293c89
+      margin-bottom: 26px
 
     &:hover
       color: rgba(255, 255, 255, .8)
+      @media screen and (max-width: 760px)
+        background-color: $whiteColor
+        color: #293c89
 
+  &__social
+    display: none
 
+    @media screen and (max-width: 760px)
+      display: flex
+      position: absolute
+      bottom: 37px
+      a
+        padding: 0 2px
+        margin: 0 10px
+        color: #5f667a
 
-
+.burger
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+  flex-direction: column
+  margin-left: 8px
+  margin-top: 4px
+  width: 16px
+  height: 15px
+  position: relative
+  transform: rotate(0deg)
+  transition: .5s ease-in-out
+  i
+    display: block
+    background-color: $blueColor
+    margin-bottom: 4px
+    position: absolute
+    height: 2px
+    width: 100%
+    border-radius: 9px
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+    &:nth-child(1)
+      top: 0
+    &:nth-child(2),
+    &:nth-child(3)
+      top: 6px
+    &:nth-child(4)
+      top: 12px
+  &.open
+    i
+      &:nth-child(1)
+        top: 18px
+        width: 0
+        left: 50%
+      &:nth-child(2)
+        transform: rotate(45deg)
+      &:nth-child(3)
+        transform: rotate(-45deg)
+      &:nth-child(4)
+        top: 18px
+        width: 0
+        left: 50%

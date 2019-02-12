@@ -128,7 +128,9 @@ input
     height: 42px
 
   &:hover
-    background-color: darken($redColor, 12%)
+    background-color: $redHoverColor
+  &:active
+    background-color: $redActiveColor
 
 .checkbox
   display: inline-flex
@@ -253,35 +255,52 @@ input
     align-items: center
     margin-bottom: 92px
     @media screen and (max-width: 650px)
-      //
+      flex-wrap: wrap
+      margin-bottom: 60px
 
     &.info-revert
       .info__cell
         &:first-child
           order: 2
+          @media screen and (max-width: 650px)
+            order: initial
 
           .info__text
             @media screen and (max-width: 1200px)
               padding-right: 0
               padding-left: 24px
+            @media screen and (max-width: 650px)
+              padding-left: 0
 
           .title-h3
             @media screen and (max-width: 1200px)
               padding-right: 0
               padding-left: 24px
+            @media screen and (max-width: 650px)
+              padding-left: 0
 
         &:last-child
           order: 1
+          @media screen and (max-width: 650px)
+            order: initial
 
     img
       width: auto
       @media screen and (max-width: 1200px)
         width: 100%
+      @media screen and (max-width: 650px)
+        max-width: 400px
+        display: block
+        margin: 0 auto
+  .title-h3
+    @media screen and (max-width: 650px)
+      text-align: center
 
   &__cell
     @media screen and (max-width: 1200px)
       width: 50%
-
+    @media screen and (max-width: 650px)
+      width: 100%
   &__text
     max-width: 500px
     font-family: $ralewayRegular
@@ -294,6 +313,10 @@ input
       margin-top: 16px
       font-size: 16px
       padding-right: 24px
+    @media screen and (max-width: 650px)
+      padding-right: 0
+      max-width: 100%
+      margin-bottom: 32px
 
 .info-medium
   &__flex
@@ -351,6 +374,10 @@ input
     @media screen and (max-width: 1200px)
       padding-left: 0
       padding-right: 0
+    @media screen and (max-width: 680px)
+      min-height: auto
+      padding-top: 40px
+      padding-bottom: 44px
 
   &__title
     max-width: 736px
@@ -362,16 +389,26 @@ input
     @media screen and (max-width: 1200px)
       font-size: 24px
       line-height: 1.42
+    @media screen and (max-width: 680px)
+      width: 100%
 
   .btn
     border-radius: 0
+    @media screen and (max-width: 680px)
+      margin: 0 auto
+
+
 
   &.revert-call
     .some-call__title
       order: 2
-
+      @media screen and (max-width: 680px)
+        order: initial
+        text-align: center
     .btn
       order: 1
+      @media screen and (max-width: 680px)
+        order: initial
 
 .nav
   .drop
@@ -422,6 +459,9 @@ input
         height: auto
         z-index: initial
         opacity: 1
+        a
+          &:hover
+            color: #a3a7b2
 
 .cube
   width: 317px

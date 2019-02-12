@@ -26,6 +26,8 @@ body
   width: 100%
   margin: 0
   padding: 0
+  &.fixed
+    position: fixed
 
 
 ul, p, h1, h2, h3, h4, h5, h6
@@ -85,8 +87,11 @@ select
   height: 30px
   line-height: 30px
   border-radius: 5px
+  &.error
+    border-color: $redColor
   @include placeholder(15px, #5f667a)
-
+  &:hover
+    color: #293c89
   &:focus
     outline: 0
 
@@ -104,9 +109,12 @@ input[type="text"]
   @include placeholder(15px, #5f667a)
   @media screen and (max-width: 900px)
     font-size: 15px !important
-
+  &:hover
+    border-color: #44ade5
   &:focus
     outline: 0 !important
+  &.error
+    border-color: $redColor
 
   &[type="color"],
   &[type="date"],

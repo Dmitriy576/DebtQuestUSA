@@ -79,6 +79,8 @@
 
   $('.menu-button').click(function () {
     $('.nav').toggleClass('open');
+    $('.burger').toggleClass('open');
+    $('body').toggleClass('fixed');
   })
 })();
 

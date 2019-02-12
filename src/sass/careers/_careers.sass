@@ -7,18 +7,20 @@
     display: flex
     align-items: center
     justify-content: center
+
   .plugin-column
     padding: 92px 0 80px 0
+
     .title-h3
       text-align: center
       display: block
       padding-bottom: 60px
 
-
 .video-banner
   width: 100%
-  background-color: red
+  background-color: $blackColor
   position: relative
+
   .play
     position: absolute
     left: 50%
@@ -33,11 +35,20 @@
     display: flex
     align-items: center
     justify-content: center
+    transition: $transition
+
+    &:hover
+      background-color: $greenHoverColor
+
+    &:active
+      background-color: $greenActiveColor
+
     i
       display: inline-block
       width: 20px
       height: 20px
       background-color: #fff
+
   video
     width: 100%
     display: block

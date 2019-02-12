@@ -89,9 +89,13 @@
       margin: 0 11px
       color: #5f667a
       display: inline-block
+      transition: $transition
 
       &:hover
-        color: darken(#5f667a, 8%)
+        color: #8992ad
+
+      &:active
+        color: #5f667a
 
       &:first-child
         margin-left: 0
@@ -125,6 +129,7 @@
       @media screen and (max-width: 480px)
         margin: 0 0 26px 0
         width: calc(100% / 3)
+
     a
       display: inline-flex
       align-items: center

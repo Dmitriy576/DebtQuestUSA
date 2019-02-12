@@ -4,6 +4,7 @@
 .select
   width: 100%
   position: relative
+  transition: $transition
 
   &__text
     display: block
@@ -28,6 +29,9 @@
     border-radius: 5px
     background-color: $whiteColor
     cursor: pointer
+    transition: $transition
+    &:hover
+      border-color: #44ade5
 
     &.arrow
       position: relative
@@ -59,6 +63,7 @@
     top: calc(100% - 1px)
     background-color: $whiteColor
     width: 100%
+    transition: $transition
     border:
       width: 0 1px 1px 1px
       style: solid
@@ -74,8 +79,10 @@
       transition: $transition
       cursor: pointer
 
+
       &:hover
-        background-color: lighten(#5f667a, 50%)
+        background-color: rgba(41, 60, 137, 0.08)
+        color: #293c89
 
 
     &.open
