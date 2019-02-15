@@ -77,11 +77,34 @@
     $('.hide-tablet').slideToggle();
   });
 
+  let nav = $('.nav');
   $('.menu-button').click(function () {
-    $('.nav').toggleClass('open');
+
+    nav.toggleClass('open');
     $('.burger').toggleClass('open');
     $('body').toggleClass('fixed');
-  })
+  });
+
+  $(window).on('resize', function () {
+    console.log(document.body.offsetWidth);
+    if (document.body.offsetWidth <= 768) {
+      nav.css({
+        'height': window.innerHeight + 'px'
+      });
+    }
+  }).trigger('resize');
+
+  $(window).on('orientationchange', function () {
+    if (document.body.offsetWidth <= 768) {
+      nav.css({
+        'height': window.innerHeight + 'px'
+      });
+    }
+  }).trigger('orientationchange');
+  $('.sub-nav-tablet').click(function () {
+    $(this).toggleClass('active');
+    $(this).parent().siblings('.drop__block').toggleClass('open');
+  });
 })();
 
 

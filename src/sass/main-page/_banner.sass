@@ -64,8 +64,10 @@
         @media screen and (max-width: 1200px)
           display: flex
           justify-content: flex-end
-          width: 368px
+          width: 468px
           flex-shrink: 0
+        @media screen and (max-width: 1024px)
+          width: 368px
         @media screen and (max-width: 760px)
           width: 50%
         @media screen and (max-width: 650px)
@@ -84,9 +86,30 @@
 
   &.banner-pages
     width: 100%
-    min-height: 594px
     background: #eef2f5
     padding-top: 45px
+    @media screen and (max-width: 1200px)
+      padding-top: 20px
+    .container
+      min-height: 594px
+      background: initial
+    .flex-banner-row .cell:first-child
+      @media screen and (max-width: 1200px)
+        padding-top: 38px
+
+    .cell
+      &:first-child
+        @media screen and (max-width: 1200px)
+          width: 50%
+        @media screen and (max-width: 1024px)
+          width: 100%
+      &:last-child
+        @media screen and (max-width: 1200px)
+          width: 50%
+        @media screen and (max-width: 1024px)
+          width: 368px
+          flex-shrink: 0
+
 
     .select
       width: 100%
@@ -100,6 +123,12 @@
       color: #5f667a
       padding-bottom: 30px
       max-width: 499px
+      @media screen and (max-width: 1024px)
+        font-size: 16px
+        line-height: 1.63
+
+    &:before
+      display: none
 
 .banner-list
   font-family: $ralewayBold
@@ -164,7 +193,6 @@
   background-color: $blueLightColor
   padding: 15px 25px 15px 25px
   @media screen and (max-width: 1200px)
-    max-width: 368px
     padding: 24px 30px
     background-color: rgba(209, 240, 255, 0.8)
   @media screen and (max-width: 760px)
