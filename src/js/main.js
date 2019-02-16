@@ -105,6 +105,22 @@
     $(this).toggleClass('active');
     $(this).parent().siblings('.drop__block').toggleClass('open');
   });
+
+  $('.play-video').fancybox({
+    type: 'inline'
+  });
+  // play-video-popup
+  $(document).ready(function () {
+    let playVideo = false;
+    $('.video-modal video').click(function () {
+      if (!playVideo) {
+        $('.video-modal video').trigger('play');
+      } else {
+        $('.video-modal video').trigger('pause');
+      }
+      playVideo = !playVideo;
+    });
+  });
 })();
 
 

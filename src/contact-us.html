@@ -123,8 +123,10 @@
     <div class="container">
       <div class="flex-banner-row">
         <div class="cell">
-          <h3 class="title-red">Contact Us</h3>
-          <h1 class="title">We are Here to Help</h1>
+          <div class="desc-text">
+            <h3 class="title-red">Contact Us</h3>
+            <h1 class="title">We are Here to Help</h1>
+          </div>
           <p class="text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -139,6 +141,10 @@
           </div>
         </div>
         <div class="cell">
+          <div class="tablet-text">
+            <h3 class="title-red">Debt Settlement</h3>
+            <h1 class="title">Learn More Now!</h1>
+          </div>
           <form class="about-us-form decor">
             <div class="about-us-form__title">
               <strong>Get A FREE Debt Relief Quote!</strong>
@@ -193,13 +199,15 @@
   </section>
   <div class="map-wrapper">
     <div id="google-maps"></div>
-    <div class="select-wrapper">
-      <div class="select-wrapper__title">
-        Our Office in Your City
-      </div>
-      <div class="select-wrapper__row">
-        <div class="select-wrapper__item" id="state"></div>
-        <div class="select-wrapper__item" id="city"></div>
+    <div class="container" style="background: red">
+      <div class="select-wrapper">
+        <div class="select-wrapper__title">
+          Our Office in Your City
+        </div>
+        <div class="select-wrapper__row">
+          <div class="select-wrapper__item" id="state"></div>
+          <div class="select-wrapper__item" id="city"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -208,65 +216,77 @@
       <div class="current-client__cell">
         <div class="current-client__content">
           <div class="current-client__title">Current Client Services:</div>
-          <p class="text">
-            If you are on existing client, you can reach us during our business hours as follows:
-          </p>
-          <div class="date">
-            <span>Monday - Friday: 8:00am (Midnight EST)</span>
-            <span>Sat: 10:00am - 10:00pm EST</span>
-          </div>
-          <div class="phone-row">
-            <span>Client Success Team (Toll Free):</span>
-            <a href="tel:8886607427">888-660-7427</a>
+          <div class="flex-row">
+            <div class="flex-row__cell">
+              <p class="text">
+                If you are on existing client, you can reach us during our business hours as follows:
+              </p>
+              <div class="date">
+                <span>Monday - Friday: 8:00am (Midnight EST)</span>
+                <span>Sat: 10:00am - 10:00pm EST</span>
+              </div>
+            </div>
+            <div class="phone-row">
+              <span>Client Success Team (Toll Free):</span>
+              <a href="tel:8886607427">888-660-7427</a>
+            </div>
           </div>
         </div>
       </div>
       <div class="current-client__cell">
-        <div class="current-client__title">Corporate Headquartes</div>
-        <p class="text">
-          DebtQuests USA LLC, Some street, Philadelphio, PL
-        </p>
-        <div class="phone-row">
-          <a href="tel:8009497975">800-949-7975</a>
-          <a href="mailto:debtquestusa@mail.com">
-            <strong>debtquestusa@mail.com</strong>
-          </a>
+        <div class="current-client__content">
+          <div class="current-client__title">Corporate Headquartes</div>
+          <div class="flex-row">
+            <div class="flex-row__cell">
+              <p class="text">
+                DebtQuests USA LLC, Some street, Philadelphio, PL
+              </p>
+            </div>
+            <div class="phone-row">
+              <a href="tel:8009497975">800-949-7975</a>
+              <a class="email" href="mailto:debtquestusa@mail.com">
+                <strong>debtquestusa@mail.com</strong>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <section class="corporate-inquiries">
-    <h3 class="title-h3">Corporate Inquiries:</h3>
-    <div class="desc">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna, Contact Person:
-    </div>
-    <div class="person-list">
-      <div class="person-list__item">
-        <div class="person-list__img">
-          <img src="img/avatar-jpg-320-x-320-px-1.jpg" alt="">
-        </div>
-        <div class="person-list__name">Name Person</div>
-        <div class="person-list__position">
-          <a href="#">Managing Member</a>
-        </div>
+    <div class="container">
+      <h3 class="title-h3">Corporate Inquiries:</h3>
+      <div class="desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna, Contact Person:
       </div>
-      <div class="person-list__item">
-        <div class="person-list__img">
-          <img src="img/avatar-jpg-320-x-320-px-1.jpg" alt="">
+      <div class="person-list">
+        <div class="person-list__item">
+          <div class="person-list__img">
+            <img src="img/avatar-jpg-320-x-320-px-1.jpg" alt="">
+          </div>
+          <div class="person-list__name">Name Person</div>
+          <div class="person-list__position">
+            <a href="#">Managing Member</a>
+          </div>
         </div>
-        <div class="person-list__name">Name Person</div>
-        <div class="person-list__position">
-          <a href="#">Managing Member</a>
+        <div class="person-list__item">
+          <div class="person-list__img">
+            <img src="img/avatar-jpg-320-x-320-px-1.jpg" alt="">
+          </div>
+          <div class="person-list__name">Name Person</div>
+          <div class="person-list__position">
+            <a href="#">Managing Member</a>
+          </div>
         </div>
-      </div>
-      <div class="person-list__item">
-        <div class="person-list__img">
-          <img src="img/avatar-jpg-320-x-320-px-1.jpg" alt="">
-        </div>
-        <div class="person-list__name">Name Person</div>
-        <div class="person-list__position">
-          <a href="#">Managing Member</a>
+        <div class="person-list__item">
+          <div class="person-list__img">
+            <img src="img/avatar-jpg-320-x-320-px-1.jpg" alt="">
+          </div>
+          <div class="person-list__name">Name Person</div>
+          <div class="person-list__position">
+            <a href="#">Managing Member</a>
+          </div>
         </div>
       </div>
     </div>
@@ -289,11 +309,11 @@
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
       </div>
       <div class="creditors__flex">
-        <img src="img/main-page/1.jpg" alt="">
-        <img src="img/main-page/2.jpg" alt="">
-        <img src="img/main-page/3.jpg" alt="">
-        <img src="img/main-page/2018-tcr-blue-ribbon-graphic.jpg" alt="">
-        <img src="img/main-page/5.jpg" alt="">
+        <img class="debt-relief" src="img/main-page/1.jpg" alt="">
+        <img class="bitmap" src="img/main-page/2.jpg" alt="">
+        <img class="overall" src="img/main-page/3.jpg" alt="">
+        <img class="image" src="img/main-page/2018-tcr-blue-ribbon-graphic.jpg" alt="">
+        <img class="tcr-blue" src="img/main-page/5.jpg" alt="">
       </div>
     </div>
   </section>

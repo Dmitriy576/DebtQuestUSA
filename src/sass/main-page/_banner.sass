@@ -90,12 +90,20 @@
     padding-top: 45px
     @media screen and (max-width: 1200px)
       padding-top: 20px
+    @media screen and (max-width: 650px)
+      padding-top: 24px
     .container
       min-height: 594px
       background: initial
-    .flex-banner-row .cell:first-child
-      @media screen and (max-width: 1200px)
-        padding-top: 38px
+      @media screen and (max-width: 650px)
+        padding-top: 0
+
+    .flex-banner-row .cell
+      &:first-child
+        @media screen and (max-width: 1200px)
+          padding-top: 38px
+        @media screen and (max-width: 650px)
+          padding-top: 35px
 
     .cell
       &:first-child
@@ -109,11 +117,12 @@
         @media screen and (max-width: 1024px)
           width: 368px
           flex-shrink: 0
-
+        @media screen and (max-width: 650px)
+          width: 100%
+          flex-shrink: initial
 
     .select
       width: 100%
-
     .text,
     p
       font-family: $ralewayRegular
@@ -129,6 +138,23 @@
 
     &:before
       display: none
+    .flex-banner-row
+      .cell
+        .title
+          padding-bottom: 32px
+          @media screen and (max-width: 1024px)
+            padding-bottom: 16px
+          @media screen and (max-width: 650px)
+            padding-bottom: 20px
+        .tablet-text
+          display: none
+          @media screen and (max-width: 700px)
+            display: block
+            text-align: center
+
+        .desc-text
+          @media screen and (max-width: 700px)
+            display: none
 
 .banner-list
   font-family: $ralewayBold
@@ -199,7 +225,7 @@
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1)
     background-color: rgba(209, 240, 255, 0.8)
   @media screen and (max-width: 650px)
-    padding: 24px 24px 32px 24px
+    padding: 24px 22px 32px 22px
     max-width: 100%
     margin-bottom: 28px
 

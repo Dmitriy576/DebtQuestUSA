@@ -11,6 +11,17 @@
     .title-h3
       width: 100%
 
+.bankruptcy-container
+  max-width: calc(1240px + 20px)
+  margin: 0 auto
+  padding: 0 10px 0 75px
+  width: 100%
+  @media screen and (max-width: 1024px)
+    padding-left: 20px
+    padding-right: 20px
+  @media screen and (max-width: 680px)
+    padding-left: 10px
+    padding-right: 10px
 
 .bankruptcy
   &__flex
@@ -20,6 +31,11 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 92px
+    @media screen and (max-width: 1024px)
+      margin-bottom: 72px
+    @media screen and (max-width: 650px)
+      flex-wrap: wrap
+      margin-bottom: 60px
 
     .sub-flex
       display: flex
@@ -28,27 +44,89 @@
       &__cell
         &:first-child
           padding: 0 30px
+          @media screen and (max-width: 650px)
+            padding: 0
+
 
         &:last-child
           width: 320px
           flex-shrink: 0
-
+          @media screen and (max-width: 1024px)
+            display: none
+        p
+          font-size: 20px
+          font-weight: normal
+          line-height: 1.5
+          color: #5f667a
+          @media screen and (max-width: 1200px)
+            font-size: 16px
+            padding-right: 24px
+            margin-top: 16px
+          @media screen and (max-width: 650px)
+            padding: 0
+            margin-top: 0
+            display: inline
   &__cell
     &:first-child
       width: 100%
       max-width: 392px
       flex-shrink: 0
-
+      @media screen and (min-width: 1024px) and (max-width: 1200px)
+        max-width: 320px
+      @media screen and (max-width: 1000px)
+        width: 50%
+        max-width: initial
+      @media screen and (max-width: 650px)
+        width: 100%
+        order: 2
       img
         width: 100%
         max-width: 392px
+        @media screen and (max-width: 1000px)
+          max-width: 100%
+
+        @media screen and (max-width: 650px)
+          max-width: 400px
+          display: block
+          margin: 0 auto
+
+
+    &:last-child
+      @media screen and (max-width: 1000px)
+        width: 50%
+      @media screen and (max-width: 650px)
+        order: 1
+        width: 100%
+        padding: 0
+        margin-bottom: 32px
+
     .title-h3
       padding-bottom: 20px
 
 
+  &__img
+    width: 392px
+    height: 350px
+    @media screen and (min-width: 1024px) and (max-width: 1200px)
+      width: 320px
+      display: flex
+      align-items: center
+    @media screen and (max-width: 1000px)
+      width: 100%
+      height: auto
+      max-height: 350px
+      justify-content: center
+      overflow: hidden
+    @media screen and (max-width: 768px)
+      max-height: 237px
+    @media screen and (max-width: 375px)
+      max-height: 199px
 
-
-
-
+.some-call
+  &.hide-desc
+    display: none
+    @media screen and (max-width: 1024px)
+      display: block
+      margin-bottom: 72px
 
 

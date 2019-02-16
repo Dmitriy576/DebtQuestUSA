@@ -4,20 +4,6 @@ let gmarkers = [];
 
 const markers = [
   {
-    country: 'Kiev',
-    city: 'Вишневое',
-    lat: 50.397376,
-    lng: 30.375665,
-    message: 'test 1'
-  },
-  {
-    country: 'Kiev',
-    city: 'Airport',
-    lat: 50.412123,
-    lng: 30.443236,
-    message: 'test 2'
-  },
-  {
     country: 'USA',
     city: 'New York',
     lat: 51.4063449,
@@ -65,6 +51,20 @@ const markers = [
     lat: 33.4063449,
     lng: 16.155306,
     message: 'test 333333'
+  },
+  {
+    country: 'Kiev',
+    city: 'Вишневое',
+    lat: 50.397376,
+    lng: 30.375665,
+    message: 'test 1'
+  },
+  {
+    country: 'Kiev',
+    city: 'Airport',
+    lat: 50.412123,
+    lng: 30.443236,
+    message: 'test 2'
   },
 ];
 

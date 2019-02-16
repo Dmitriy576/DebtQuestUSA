@@ -111,18 +111,41 @@
           <a href=""><i class="icon-twitter"></i></a>
           <a href=""><i class="icon-linkedin"></i></a>
         </div>
-        <div class="nav__copyright">©  2018, DebtQuest, All rights reserved.</div>
+        <div class="nav__copyright">© 2018, DebtQuest, All rights reserved.</div>
       </div>
     </div>
   </nav>
 </header>
 <main class="careers">
-  <section class="video-banner">
-    <button class="play">
-      <i class="icon-line"></i>
-    </button>
-    <video src="video/КБ.mp4"></video>
+
+  <section class="careers-banner">
+    <div class="container">
+      <div class="careers-banner__content">
+        <div class="careers-banner__text">
+          <h1 class="title">Want To Join Our Team?</h1>
+          <div class="careers-banner__desc">
+            <span>Check out this video and view</span>
+            <strong>Current Opened positions</strong>
+          </div>
+        </div>
+        <div class="careers-banner-video">
+          <a href="#video-modal" class="play-video">
+            <i class="icon-play"></i>
+          </a>
+          <div class="careers-banner-video__img">
+            <!--<img src="img/banner.jpg" alt="">-->
+            <img src="img/m15-155b.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+  <!--<section class="video-banner">-->
+    <!--<button class="play">-->
+      <!--<i class="icon-line"></i>-->
+    <!--</button>-->
+    <!--<video src="video/КБ.mp4"></video>-->
+  <!--</section>-->
   <section class="plugin-large">
     <div class="container">
       <div class="plugin-large__flex">plugin</div>
@@ -144,16 +167,16 @@
   <section class="creditors">
     <div class="container">
       <div class="title-h3">We know what we are doing</div>
-      <div class="creditors__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-        nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+      <div class="creditors__text">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia
       </div>
       <div class="creditors__flex">
-        <img src="img/main-page/1.jpg" alt="">
-        <img src="img/main-page/2.jpg" alt="">
-        <img src="img/main-page/3.jpg" alt="">
-        <img src="img/main-page/2018-tcr-blue-ribbon-graphic.jpg" alt="">
-        <img src="img/main-page/5.jpg" alt="">
+        <img class="debt-relief" src="img/main-page/1.jpg" alt="">
+        <img class="bitmap" src="img/main-page/2.jpg" alt="">
+        <img class="overall" src="img/main-page/3.jpg" alt="">
+        <img class="image" src="img/main-page/2018-tcr-blue-ribbon-graphic.jpg" alt="">
+        <img class="tcr-blue" src="img/main-page/5.jpg" alt="">
       </div>
     </div>
   </section>
@@ -209,6 +232,12 @@
       laboris nisi ut aliquip ex ea commodo consequat. </p>
   </div>
 </footer>
+
+<div id="video-modal" class="video-modal" style="display: none;">
+  <div class="video">
+    <video autoplay src="video/КБ.mp4"></video>
+  </div>
+</div>
 <script src="js/libs.min.js"></script>
 <script src="js/main.js"></script>
 </body>

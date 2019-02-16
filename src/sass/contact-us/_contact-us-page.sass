@@ -1,5 +1,10 @@
 @import "../settings"
 @import "../mixin"
+.contact-us
+  .about-us-form__img-row
+    @media screen and (max-width: 650px)
+      display: block
+
 .banner-phone
   font-family: $ralewayBold
   font-size: 20px
@@ -21,20 +26,20 @@
   line-height: 2
   letter-spacing: normal
   color: #5f667a
+  @media screen and (max-width: 1024px)
+    font-size: 16px
 
   span
     display: block
 
 .excellent-plugin
   margin-bottom: 21px
-
 .map
   min-height: 520px
   outline: 1px solid red
   display: flex
   align-items: center
   justify-content: center
-
 
 .current-client
   padding-top: 72px
@@ -43,13 +48,38 @@
   .container
     display: flex
     width: 100%
+    @media screen and (max-width: 1000px)
+      flex-wrap: wrap
 
   &__cell
     width: 50%
     min-height: 100px
+    &:first-child
+      padding-right: 35px
+      @media screen and (max-width: 1000px)
+        padding-right: 0
+
+    @media screen and (max-width: 1000px)
+      width: 100%
+      margin-bottom: 52px
 
   &__content
     max-width: 500px
+    @media screen and (max-width: 1000px)
+      max-width: 100%
+    .flex-row
+      display: flex
+      width: 100%
+      @media screen and (max-width: 580px)
+        flex-wrap: wrap
+      &__cell
+        width: 50%
+        @media screen and (max-width: 580px)
+          width: 100%
+        &:first-child
+          padding-right: 40px
+          @media screen and (max-width: 580px)
+            padding-right: 0
 
   &__title
     font-family: $ralewayBold
@@ -59,9 +89,20 @@
     letter-spacing: 0.5px
     color: $blueColor
     margin-bottom: 20px
+    @media screen and (max-width: 1024px)
+      font-size: 26px
+      line-height: 1.54
+      letter-spacing: 0.4px
+      margin-bottom: 24px
+    @media screen and (max-width: 580px)
+      text-align: center
+      margin-bottom: 18px
+
 
   .date
     margin-bottom: 40px
+    @media screen and (max-width: 1024px)
+      margin-bottom: 16px
 
     span
       display: block
@@ -70,6 +111,9 @@
       font-weight: normal
       line-height: 2
       color: #5f667a
+      @media screen and (max-width: 1024px)
+        font-size: 16px
+        line-height: 1.63
 
     strong
       font-family: $ralewayBold
@@ -85,7 +129,10 @@
     line-height: 1.5
     letter-spacing: normal
     color: #5f667a
-
+    @media screen and (max-width: 1024px)
+      font-size: 16px
+      line-height: 1.63
+      margin-bottom: 16px
 .phone-row
   font-family: $ralewayRegular
   font-size: 20px
@@ -97,6 +144,9 @@
   color: #1c1c1c
   display: flex
   flex-direction: column
+  @media screen and (max-width: 1024px)
+    font-size: 16px
+    line-height: 2.25
 
   span
     display: block
@@ -104,15 +154,11 @@
   a
     font-family: $ralewayBold
     color: #1c1c1c
-
-.desc
-  font-family: $ralewayRegular
-  font-size: 20px
-  font-weight: normal
-  line-height: 1.5
-  text-align: center
-  color: #5f667a
-  margin-bottom: 60px
+    &.email
+      color: #293c89
+      text-decoration: underline
+      &:hover
+        text-decoration: none
 
 .corporate-inquiries
   padding-bottom: 89px
@@ -120,19 +166,43 @@
   .title-h3
     text-align: center
     margin-bottom: 20px
-
+  .desc
+    font-family: $ralewayRegular
+    font-size: 20px
+    font-weight: normal
+    line-height: 1.5
+    text-align: center
+    color: #5f667a
+    margin-bottom: 60px
+    @media screen and (max-width: 650px)
+      font-size: 16px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: 1.63
+      letter-spacing: normal
+      text-align: center
 .person-list
   display: flex
   justify-content: center
   width: 100%
-
+  @media screen and (max-width: 750px)
+    flex-wrap: wrap
   &__item
     width: 202px
     margin-left: 50px
     margin-right: 50px
+    @media screen and (max-width: 1024px)
+      width: 182px
+      margin-left: 27px
+      margin-right: 27px
+    @media screen and (max-width: 750px)
+      margin-bottom: 35px
 
   &__img
     margin-bottom: 30px
+    @media screen and (max-width: 1024px)
+      margin-bottom: 8px
 
     img
       width: 100%
@@ -144,6 +214,11 @@
     line-height: 1.67
     text-align: center
     color: #1c1c1c
+    @media screen and (max-width: 1024px)
+      font-size: 18px
+      font-weight: bold
+      line-height: 2.22
+      text-align: center
 
   &__position
     text-align: center
@@ -156,6 +231,14 @@
       display: inline-block
       color: #293c89
       text-decoration: underline
+      @media screen and (max-width: 1024px)
+        font-size: 16px
+        font-weight: normal
+        font-style: normal
+        font-stretch: normal
+        line-height: 2.5
+        letter-spacing: normal
+        text-align: center
 
       &:hover
         text-decoration: none
@@ -179,26 +262,47 @@
       padding: 10px
       cursor: pointer
 
-#google-maps
-  height: 500px
-  width: 100%
-  margin: 0
-  padding: 0
-  .gmnoprint
-    display: none
-
 .map-wrapper
   position: relative
   width: 100%
+  #google-maps
+    height: 500px
+    width: 100%
+    margin: 0
+    padding: 0
+    position: absolute !important
+    z-index: 5
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    @media screen and (max-width: 1024px)
+      height: 580px
+    .gmnoprint
+      display: none
+    @media screen and (max-width: 650px)
+      height: 620px
+  .container
+    position: relative
+    z-index: 10
   .select-wrapper
     position: absolute
-    left: 100px
     top: 16px
     width: 100%
     max-width: 560px
     min-height: 131px
     background-color: rgba(255, 255, 255, 0.7)
     padding: 24px
+    @media screen and (max-width: 1024px)
+      width: initial
+      max-width: initial
+      left: 28px
+      right: 28px
+    @media screen and (max-width: 650px)
+      left: 20px
+      right: 20px
+      padding: 20px 16px
+
     &__title
       font-family: $ralewayBold
       font-size: 24px
@@ -206,16 +310,27 @@
       letter-spacing: 0.3px
       color: $blueColor
       margin-bottom: 16px
+      @media screen and (max-width: 650px)
+        font-size: 20px
+        letter-spacing: 0.3px
     &__row
       display: flex
       width: 100%
       justify-content: space-between
       align-items: center
+      @media screen and (max-width: 650px)
+        flex-wrap: wrap
     &__item
       width: calc(50% - 8px)
       height: 30px
       border-radius: 5px
       position: relative
+      @media screen and (max-width: 650px)
+        width: 100%
+        margin-bottom: 11px
+      &:last-child
+        @media screen and (max-width: 650px)
+          margin-bottom: 0
       &:after
         content: ''
         top: 13px
@@ -233,6 +348,4 @@
         font-weight: normal
         color: #5f667a
         height: 30px
-
-
 

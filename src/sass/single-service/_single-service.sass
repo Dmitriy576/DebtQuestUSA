@@ -1,14 +1,21 @@
 @import "../settings"
 @import "../mixin"
 .single-service
+  .container-small
+    @media screen and (max-width: 650px)
+      padding-left: 20px
+      padding-right: 20px
+
   .debt-text
     width: 100%
     padding-top: 72px
+
     .title-h3
       width: 100%
       display: block
       text-align: center
       padding-bottom: 24px
+
     &__text
       padding-bottom: 30px
       font-family: $ralewayRegular
@@ -16,36 +23,74 @@
       font-weight: normal
       line-height: 1.5
       color: #5f667a
+      @media screen and (max-width: 1200px)
+        font-size: 16px
+
       &:last-child
         padding-bottom: 0
 
     &:last-child
-        padding-bottom: 0
+      padding-bottom: 0
+
   .info
     &__flex
       &.small
         margin-bottom: 40px
+
     .title-h3
       padding-bottom: 20px
+
     &__flex
       display: flex
       justify-content: space-between
       align-items: flex-start
+
+      &.revert.small
+        .info__cell
+          &:first-child
+            @media screen and (max-width: 650px)
+              padding-right: 0
+              order: 1
+              margin-bottom: 32px
+
     &__cell
       padding-right: 30px
+
+      &:first-child
+        @media screen and (max-width: 650px)
+          order: 2
+          padding-right: 0
+
       &:last-child
         padding-right: 0
+        @media screen and (max-width: 650px)
+          order: 1
+
     &__text
       margin-top: 0
+      @media screen and (max-width: 650px)
+        margin-bottom: 0
+        margin-top: 32px
+
   .about-us
     padding-top: 0
     padding-bottom: 40px
+
+    &__text
+      @media screen and (max-width: 768px)
+        flex-wrap: wrap
+
+    @media screen and (max-width: 768px)
+      p
+        width: 100%
+        margin-right: 0
+        margin-bottom: 36px
+        max-width: 100%
+
   .img-text
     width: 100%
     padding-bottom: 92px
-    img
-      width: auto
-      margin-bottom: 40px
+
     &__text
       width: 100%
       padding-bottom: 30px
@@ -56,6 +101,30 @@
       line-height: 1.5
       letter-spacing: normal
       color: #5f667a
+      @media screen and (max-width: 1200px)
+        font-size: 16px
+        line-height: 1.63
+
       &:last-child
         padding-bottom: 0
 
+    &__img
+      @media screen and (max-width: 650px)
+        margin-bottom: 32px
+      @media screen and (max-width: 500px)
+        height: 234px
+        position: relative
+        overflow: hidden
+
+    img
+      width: 100%
+      margin-bottom: 40px
+      @media screen and (max-width: 500px)
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        height: 100%
+        width: auto
