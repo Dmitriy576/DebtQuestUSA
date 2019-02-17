@@ -19,6 +19,7 @@
     @media screen and (max-width: 1280px)
       font-size: 26px
       margin-bottom: 12px
+
   &__desc
     font-family: $ralewayRegular
     font-size: 32px
@@ -34,6 +35,7 @@
       margin-bottom: 30px
     @media screen and (max-width: 650px)
       text-align: center
+
     span
       display: block
       @media screen and (max-width: 768px)
@@ -78,6 +80,7 @@
         text-align: center
       @media screen and (max-width: 375px)
         font-size: 22px
+
   .careers-banner-video
     min-height: 420px
     position: relative
@@ -128,6 +131,7 @@
       position: relative
       @media screen and (max-width: 768px)
         min-height: initial
+
       img
         position: absolute
         width: 102%
@@ -180,15 +184,14 @@
   &:active
     background-color: $greenActiveColor
 
-
-  i
+  span
     color: $whiteColor
     position: relative
     left: 3px
     font-size: 24px
     width: 33px
     height: 33px
-    background: url("../../img/icons/play.svg") no-repeat center
+    background: url("../img/icons/line.png") no-repeat center
     background-size: contain
     @media screen and (max-width: 650px)
       font-size: 20px
@@ -200,8 +203,10 @@
       top: -5px
 
   &.play
-    i
+    span
       width: 20px
+      display: inline-block
+
       height: 20px
       background-color: $whiteColor
       position: relative
