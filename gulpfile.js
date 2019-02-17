@@ -121,6 +121,9 @@ gulp.task('build', ['clean', 'sass', 'scripts'], function () {
   let buildImg = gulp.src('src/img/**/*')
       .pipe(gulp.dest('dist/img'));
 
+  let buildVideo = gulp.src('src/video/**/*')
+      .pipe(gulp.dest('dist/video'));
+
   let buildJs = gulp.src('src/js/**/*')
       .pipe(gulp.dest('dist/js'));
 

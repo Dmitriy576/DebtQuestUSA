@@ -42,10 +42,10 @@
 	@if $filename == linkedin {
 		$char: "\E005";
 	}
-	@if $filename == menu-arrow {
+	@if $filename == phone {
 		$char: "\E006";
 	}
-	@if $filename == phone {
+	@if $filename == play {
 		$char: "\E007";
 	}
 	@if $filename == twitter {
@@ -81,11 +81,11 @@
 .icon-linkedin {
 	@include icon(linkedin);
 }
-.icon-menu-arrow {
-	@include icon(menu-arrow);
-}
 .icon-phone {
 	@include icon(phone);
+}
+.icon-play {
+	@include icon(play);
 }
 .icon-twitter {
 	@include icon(twitter);
